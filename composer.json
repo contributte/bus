@@ -1,0 +1,52 @@
+{
+  "name": "contributte/bus",
+  "description": "Simple and adaptive command bus to Nette Framework (@nette)",
+  "keywords": [
+    "nette",
+    "bus",
+    "command",
+    "command-bus"
+  ],
+  "type": "library",
+  "license": "MIT",
+  "homepage": "https://github.com/contributte/bus",
+  "authors": [
+    {
+      "name": "Milan Felix Šulc",
+      "homepage": "https://f3l1x.io"
+    }
+  ],
+  "require": {
+    "php": ">=8.1",
+    "nette/di": "^3.2.0"
+  },
+  "require-dev": {
+    "contributte/qa": "^0.4",
+    "contributte/tester": "^0.3",
+    "contributte/phpstan": "^0.1",
+    "mockery/mockery": "^1.5.0"
+  },
+  "autoload": {
+    "psr-4": {
+      "Contributte\\Bus\\": "src"
+    }
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "Tests\\": "tests"
+    }
+  },
+  "minimum-stability": "dev",
+  "prefer-stable": true,
+  "config": {
+    "sort-packages": true,
+    "allow-plugins": {
+      "dealerdirect/phpcodesniffer-composer-installer": true
+    }
+  },
+  "extra": {
+    "branch-alias": {
+      "dev-master": "0.1.x-dev"
+    }
+  }
+}
