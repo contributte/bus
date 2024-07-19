@@ -17,7 +17,7 @@ final class Functions
 
 	public static function leaf(): callable
 	{
-		return fn (): Result => EmptyResult::of();
+		return fn (): Result => new EmptyResult();
 	}
 
 }

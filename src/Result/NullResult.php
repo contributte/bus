@@ -11,16 +11,6 @@ use Contributte\Bus\Exception\LogicException;
 class NullResult extends Result
 {
 
-	protected function __construct()
-	{
-		// Secure constructor
-	}
-
-	public static function of(): self
-	{
-		return new static();
-	}
-
 	public function trackEvent(Event $event): Event
 	{
 		throw new LogicException('Events not implement');

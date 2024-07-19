@@ -7,7 +7,7 @@ use Tester\Assert;
 require_once __DIR__ . '/../../bootstrap.php';
 
 Toolkit::test(function (): void {
-	$result = NullResult::of();
+	$result = new NullResult();
 
 	Assert::exception(
 		fn () => $result->pullEvents(),

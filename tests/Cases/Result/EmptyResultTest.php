@@ -7,6 +7,6 @@ use Tester\Assert;
 require_once __DIR__ . '/../../bootstrap.php';
 
 Toolkit::test(function (): void {
-	$result = EmptyResult::of();
+	$result = new EmptyResult();
 	Assert::equal([], $result->pullEvents());
 });

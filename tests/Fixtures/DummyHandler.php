@@ -12,7 +12,7 @@ final class DummyHandler implements IHandler
 
 	public function handle(Command $command): Result
 	{
-		return EmptyResult::of();
+		return new EmptyResult();
 	}
 
 }

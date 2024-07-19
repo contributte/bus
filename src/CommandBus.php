@@ -50,7 +50,7 @@ class CommandBus
 
 		// No result, thus create result manually
 		if ($return === null) {
-			return NullResult::of();
+			return new NullResult();
 		}
 
 		return $return;

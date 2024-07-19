@@ -20,7 +20,7 @@ Toolkit::test(function (): void {
 	$handler = $locator = Mockery::mock(IHandler::class);
 	$locator->shouldReceive('handle')
 		->once()
-		->andReturn(DataResult::ofScalar(true));
+		->andReturn(DataResult::fromScalar(true));
 
 	$locator = Mockery::mock(IHandlerLocator::class);
 	$locator->shouldReceive('find')

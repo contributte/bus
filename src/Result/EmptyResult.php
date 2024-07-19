@@ -8,14 +8,4 @@ namespace Contributte\Bus\Result;
 class EmptyResult extends Result
 {
 
-	protected function __construct()
-	{
-		// Secure constructor
-	}
-
-	public static function of(): self
-	{
-		return new static();
-	}
-
 }

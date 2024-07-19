@@ -10,12 +10,12 @@ class DataResult extends Result
 
 	protected mixed $data;
 
-	protected function __construct(mixed $data)
+	public function __construct(mixed $data)
 	{
 		$this->data = $data;
 	}
 
-	public static function of(mixed $data): self
+	public static function from(mixed $data): self
 	{
 		return new static($data);
 	}
@@ -23,37 +23,37 @@ class DataResult extends Result
 	/**
 	 * @param mixed[] $data
 	 */
-	public static function ofArray(array $data): self
+	public static function fromArray(array $data): self
 	{
 		return new static($data);
 	}
 
-	public static function ofNull(): self
+	public static function fromNull(): self
 	{
 		return new static(null);
 	}
 
-	public static function ofScalar(string|int|float|bool $data): self
+	public static function fromScalar(string|int|float|bool $data): self
 	{
 		return new static($data);
 	}
 
-	public static function ofString(string $data): self
+	public static function fromString(string $data): self
 	{
 		return new static($data);
 	}
 
-	public static function ofBoolean(bool $data): self
+	public static function fromBoolean(bool $data): self
 	{
 		return new static($data);
 	}
 
-	public static function ofInteger(int $data): self
+	public static function fromInteger(int $data): self
 	{
 		return new static($data);
 	}
 
-	public static function ofStructure(\stdClass $data): self
+	public static function fromStructure(\stdClass $data): self
 	{
 		return new static($data);
 	}

@@ -93,7 +93,7 @@ final class CreateUserHandler implements IHandler
         $user = new User($command->email);
         $this->em->persist($user);
 
-        return DataResult::of($user);
+        return DataResult::from($user);
     }
 
 }
