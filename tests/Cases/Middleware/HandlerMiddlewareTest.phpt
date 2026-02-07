@@ -1,20 +1,23 @@
 <?php declare(strict_types = 1);
 
+namespace Tests\Cases\Middleware;
+
 use Contributte\Bus\Handler\IHandler;
 use Contributte\Bus\Locator\IHandlerLocator;
 use Contributte\Bus\Middleware\HandlerMiddleware;
 use Contributte\Bus\Result\DataResult;
 use Contributte\Bus\Utils\Functions;
 use Contributte\Tester\Toolkit;
+use Mockery;
 use Tester\Assert;
 use Tests\Fixtures\DummyCommand;
 
 require_once __DIR__ . '/../../bootstrap.php';
 
-Toolkit::tearDown(fn () => Mockery::close());
+Toolkit::tearDown(static fn () => Mockery::close());
 
 // E2E
-Toolkit::test(function (): void {
+Toolkit::test(static function (): void {
 	$command = new DummyCommand();
 
 	$handler = $locator = Mockery::mock(IHandler::class);

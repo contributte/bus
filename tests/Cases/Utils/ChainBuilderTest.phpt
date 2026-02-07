@@ -1,5 +1,7 @@
 <?php declare(strict_types = 1);
 
+namespace Tests\Cases\Utils;
+
 use Contributte\Bus\Result\EmptyResult;
 use Contributte\Bus\Utils\ChainBuilder;
 use Contributte\Tester\Toolkit;
@@ -10,7 +12,7 @@ use Tests\Fixtures\DummyMiddleware;
 require_once __DIR__ . '/../../bootstrap.php';
 
 // Empty
-Toolkit::test(function (): void {
+Toolkit::test(static function (): void {
 	$chain = (new ChainBuilder())->create();
 	Assert::type(EmptyResult::class, $chain());
 
@@ -19,7 +21,7 @@ Toolkit::test(function (): void {
 });
 
 // Simple middleware
-Toolkit::test(function (): void {
+Toolkit::test(static function (): void {
 	$middleware = new DummyMiddleware();
 
 	$builder = new ChainBuilder();

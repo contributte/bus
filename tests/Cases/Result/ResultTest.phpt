@@ -1,5 +1,7 @@
 <?php declare(strict_types = 1);
 
+namespace Tests\Cases\Result;
+
 use Contributte\Bus\Result\Result;
 use Contributte\Tester\Toolkit;
 use Tester\Assert;
@@ -8,7 +10,7 @@ use Tests\Fixtures\DummyEvent;
 require_once __DIR__ . '/../../bootstrap.php';
 
 // Events
-Toolkit::test(function (): void {
+Toolkit::test(static function (): void {
 	$event = new DummyEvent();
 
 	$result = new Result();
